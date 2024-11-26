@@ -32,13 +32,16 @@
             height: 100%;
             overflow-y: auto;
         }
-        .footer {
-            background: rgba(2, 136, 209, 0.9);
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
-        }
+     .footer {
+    background: rgba(2, 136, 209, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; /* Фиксируем подвал */
+    bottom: 0; /* Располагаем у нижнего края экрана */
+    width: 100%; /* Делаем ширину подвала на всю страницу */
+    z-index: 1000; /* Повышаем уровень слоя */
+}
         .card {
             border: none;
             border-radius: 15px;

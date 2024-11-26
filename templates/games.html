@@ -32,13 +32,16 @@
             height: 100%;
             overflow-y: auto;
         }
-        .footer {
-            background: rgba(2, 136, 209, 0.9);
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
-        }
+      .footer {
+    background: rgba(2, 136, 209, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; /* Фиксируем подвал */
+    bottom: 0; /* Располагаем у нижнего края экрана */
+    width: 100%; /* Делаем ширину подвала на всю страницу */
+    z-index: 1000; /* Повышаем уровень слоя */
+}
         .card {
             border: none;
             border-radius: 15px;
@@ -61,7 +64,7 @@
 </head>
 <body>
     <div class="header">
-        <span>ReviewHub - Оцени всё!</span>
+        <span>ReviewHub - оцени всё!</span>
     </div>
 
     <div class="container mt-4">
@@ -84,8 +87,8 @@
                     <div class="card-header">
                         <h2 class="text-center">Отзывы на игры</h2>
                     </div>
-                    <<div class="card-body">
-    <h2>Отзывы на аниме:</h2>
+                    <div class="card-body">
+    <h2>Отзывы на игры:</h2>
     {% for review in reviews %}
     <div class="review-item">
         <h4>{{ review.title }} - Оценка: {{ review.rating }}/5</h4>
